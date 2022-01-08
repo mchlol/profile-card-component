@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+:root {
+    --dark-cyan: hsl(185, 75%, 39%);
+    --v-dark-desat-blue: hsl(229, 23%, 23%);
+    --dark-greyish-blue: hsl(227, 10%, 46%);
+    --dark-grey: hsl(0, 0%, 59%);
+    --trans-white: hsla(0,0%,100%,0.85);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%; // 10px for calculating ems & rems
+}
+
+.bg {
+    position: fixed;
+    width: 100%;
+}
+@media screen and (max-width: 760px) {
+    .bg {
+        min-width: 120%;
+    }
+  }
+
+.bg-image-top {
+    z-index: -1;
+    top: 0;
+    left: 0;
+    transform: translate(-50%,-50%);
+}
+
+.bg-image-bottom {
+    z-index: -2;
+    bottom: 0;
+    right: 0;
+    transform: translate(50%,50%);
+}
+
+body {
+    font-family: 'Kumbh Sans', sans-serif;
+    font-size: 1.8rem;
+    color: var(--dark-grey);
+    background-color: var(--dark-cyan);
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+    min-height:100vh;
+}
+
+h1, h2 {
+    color: var(--v-dark-desat-blue);
+}
+
+.card { // AKA main
+    border-radius: 1em;
+    background: url("../../images/bg-pattern-card.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: white;
+    margin: 1em;
+    display: grid;
+    grid-template-rows: 2fr 1fr 1fr;
+    min-width: 320px;
+    max-height: 360px;
+}
+
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    img {
+        border-radius: 50%;
+        border: 5px solid white;
+    }
+}
+
+.info {
+    text-align: center;
+    padding-top: 3em;
+    padding: 1em 0;
+}
+
+.profile-text {
+    padding: 0.5em;
+}
+
+.name {
+    color: var(--v-dark-desat-blue);
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.location {
+    font-size: 1.5rem;
+}
+
+.stats-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    border-top: 1px solid #efefef;
+}
+
+.stat {
+    text-align: center;
+    font-size: 1.5rem;
+    padding: 0.5em 0;
+    p {
+        font-size: 1.1rem;
+    }
+}
+
+.attribution {
+    font-size: 1.1rem;
+    text-align: center;
+    color: white;
+  }
+
+  .attribution a {
+    color: var(--v-dark-desat-blue);
+  }
